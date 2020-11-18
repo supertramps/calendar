@@ -1,2 +1,2 @@
 # calendar
-Calednar with to-do list
+Calendar with to-do list
