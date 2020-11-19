@@ -14,6 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Calendar</title>
   </head>
   <body>
@@ -22,7 +27,7 @@
         <div class="month">
           <i class="fas fa-angle-left prev"></i>
           <div class="date">
-            <h1>Nov 18, Wednesday</h1>
+            <h1>November 18</h1>
           </div>
           <i class="fas fa-angle-right next"></i>
         </div>
@@ -83,6 +88,41 @@
           <div class="next-date">4</div>
           <div class="next-date">5</div>
           <div class="next-date">6</div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <p id="location">Göteborg</p>
+        <p id="time">15:32</p>
+        <div class="white-line"></div>
+        <p class="task-list-header">Upcoming</p>
+        <div id="task-list-container">
+          <div id="task-1-container">
+            <div>
+              <img
+                class="task-list-dot"
+                src="./svg/task-dot-yellow.svg"
+                alt=""
+              />
+              <p id="task-1">Gruppmöte</p>
+            </div>
+            <p id="time-1">10:00 - 10:30</p>
+          </div>
+          <div id="task-2-container">
+            <p id="task-2">Lunchmöte</p>
+            <p id="time-2">12:00 - 13:00</p>
+          </div>
+          <div id="task-3-container">
+            <p id="task-3">Gruppmöte</p>
+            <p id="time-3">14:00 - 14:30</p>
+          </div>
+          <div id="task-4-container">
+            <p id="task-4">Gympass</p>
+            <p id="time-4">17:30 - 18:30</p>
+          </div>
+          <div id="task-5-container">
+            <p id="task-5">Middag med katten</p>
+            <p id="time-5">19:00</p>
+          </div>
         </div>
       </div>
     </div>

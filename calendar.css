@@ -7,6 +7,15 @@
 /* HTML font-sized changed so 1 rem = 10px */
 html {
   font-size: 62.5%;
+  height: 100%;
+  background: #1e272e;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
@@ -20,8 +29,8 @@ html {
 }
 
 .calendar {
-  width: 45rem;
-  height: 52rem;
+  width: 60rem;
+  height: 60rem;
   background: #1e272e;
   box-shadow: 0 0.5rem 3rem rgba (0, 0, 0, 0.5);
 }
@@ -65,7 +74,7 @@ html {
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
+  width: calc(59.2rem / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,8 +95,8 @@ html {
 .days div {
   font-size: 2.3rem;
   margin: 0.3rem;
-  width: calc(40.2rem / 7);
-  height: 5rem;
+  width: calc(55.2rem / 7);
+  height: 7rem;
   display: flex;
   justify-content: flex-end;
   background: linear-gradient(180deg, #485460 0%, rgba(72, 84, 96, 0) 100%);
@@ -113,8 +122,7 @@ html {
 
 .task-dot {
   width: 15%;
-  display: flex;
   position: relative;
-  right: 1rem;
-  top: 1.5rem;
+  right: 2.8rem;
+  top: 2.5rem;
 }

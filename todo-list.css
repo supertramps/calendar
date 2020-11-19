@@ -1,0 +1,147 @@
+.sidebar {
+  height: 65rem;
+  background-color: burlywood;
+  width: 30rem;
+  margin-left: 2rem;
+  background: url(./imgs/Task-bar.png),
+    linear-gradient(180deg, #3c40c6 0%, rgba(87, 95, 207, 0) 91.67%);
+  position: relative;
+  bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#location {
+  position: absolute;
+  top: 10rem;
+  font-size: 3rem;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+}
+
+#time {
+  position: absolute;
+  top: 14rem;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 400;
+  flex-direction: column;
+}
+
+#task-list {
+  position: absolute;
+  top: 30rem;
+  left: 2rem;
+}
+
+.task-list-header {
+  position: absolute;
+  top: 23rem;
+  left: 2rem;
+  font-size: 1.8rem;
+  font-family: "Roboto";
+}
+
+#task-list-container {
+  height: 32rem;
+  width: 100%;
+  position: absolute;
+  top: 27rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+}
+
+#task-1-container {
+  height: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+  position: relative;
+}
+
+#task-2-container {
+  height: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+  position: relative;
+}
+
+#task-3-container {
+  height: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+  position: relative;
+}
+
+#task-4-container {
+  height: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+  position: relative;
+}
+
+#task-5-container {
+  height: 5rem;
+  width: 100%;
+  margin-left: 2rem;
+  position: relative;
+}
+
+#task-1 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+}
+
+#task-2 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+}
+
+#task-3 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+}
+
+#task-4 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+}
+
+#task-5 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+}
+
+#time-1 {
+  font-family: "Roboto";
+}
+
+#time-2 {
+  font-family: "Roboto";
+}
+
+#time-3 {
+  font-family: "Roboto";
+}
+
+#time-4 {
+  font-family: "Roboto";
+}
+
+#time-5 {
+  font-family: "Roboto";
+}
+
+.white-line {
+  position: absolute;
+  width: 25rem;
+  height: 0;
+  border: 0.1rem solid #fefefe;
+  top: 21rem;
+}
+
+.task-list-dot {
+  width: 4%;
+}
