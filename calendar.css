@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Space Mono";
 }
 /* HTML font-sized changed so 1 rem = 10px */
 html {
@@ -16,8 +15,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: "Space Mono";
 }
-
+/* container of calendar, covers the whole site */
 .container {
   width: 100%;
   height: 100%;
@@ -28,6 +28,7 @@ body {
   align-items: center;
 }
 
+/* Calendar sizing and color */
 .calendar {
   width: 60rem;
   height: 60rem;
@@ -46,20 +47,18 @@ body {
   text-align: center;
 }
 
+/* Arrow icons */
 .month i {
   font-size: 2.3rem;
   cursor: pointer;
 }
 
+/* The month above the calendar */
 .month h1 {
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
   margin-bottom: 0.6rem;
-}
-
-.month p {
-  font-size: 1.6rem;
 }
 
 .weekdays {
@@ -69,7 +68,7 @@ body {
   display: flex;
   align-items: center;
 }
-
+/* The weekdays above the calendar */
 .weekdays div {
   font-size: 2rem;
   font-weight: 400;
@@ -87,13 +86,15 @@ body {
   flex-wrap: wrap;
   padding: 0.2rem;
 }
-
+/* Highlights todays date */
 .today {
   color: #1e272e;
   background: #05c46b !important;
 }
+
+/* The dates inside the calendar */
 .days div {
-  font-size: 2.3rem;
+  font-size: 3rem;
   margin: 0.3rem;
   width: calc(55.2rem / 7);
   height: 7rem;
@@ -109,7 +110,7 @@ body {
   background-color: #485460;
   cursor: pointer;
 }
-
+/* The days from previous and next month */
 .prev-date,
 .next-date {
   opacity: 0.5;
@@ -123,6 +124,6 @@ body {
 .task-dot {
   width: 15%;
   position: relative;
-  right: 2.8rem;
+  right: 2rem;
   top: 2.5rem;
 }
