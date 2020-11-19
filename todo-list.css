@@ -68,10 +68,15 @@
 #task-1 {
   font-family: "Roboto";
   margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
 }
 
 #time-1 {
   font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
 }
 /* #endregion Task 1 */
 
@@ -86,10 +91,15 @@
 #task-2 {
   font-family: "Roboto";
   margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
 }
 
 #time-2 {
   font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
 }
 /* #endregion Task 2 */
 
@@ -104,10 +114,15 @@
 #task-3 {
   font-family: "Roboto";
   margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
 }
 
 #time-3 {
   font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
 }
 /* #endregion Task 3 */
 
@@ -122,10 +137,15 @@
 #task-4 {
   font-family: "Roboto";
   margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
 }
 
 #time-4 {
   font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
 }
 /* #endregion Task 4 */
 
@@ -140,10 +160,15 @@
 #task-5 {
   font-family: "Roboto";
   margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
 }
 
 #time-5 {
   font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
 }
 /* #endregion Task 5 */
 
