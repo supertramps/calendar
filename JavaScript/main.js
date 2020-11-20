@@ -1,22 +1,26 @@
 window.addEventListener("load", main());
 
-function main() {}
+function main() {
+  getMonthForTitel();
+}
 
-const date = new Date();
+function getMonthForTitel() {
+  const date = new Date();
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+  document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+}
