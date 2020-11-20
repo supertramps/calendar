@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+  border-radius: 1rem;
 }
 
 #location {
@@ -45,22 +46,41 @@
 }
 
 #task-list-container {
-  height: 32rem;
+  height: 38rem;
   width: 100%;
   position: absolute;
   top: 27rem;
   display: flex;
   flex-direction: column;
   font-size: 1.3rem;
+  font-family: "Roboto";
 }
+/* #region Task 1 */
 
 #task-1-container {
   height: 5rem;
   width: 100%;
   margin-left: 2rem;
   position: relative;
+  font-family: "Roboto";
 }
 
+#task-1 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
+}
+
+#time-1 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
+}
+/* #endregion Task 1 */
+
+/* #region Task 2 */
 #task-2-container {
   height: 5rem;
   width: 100%;
@@ -68,6 +88,22 @@
   position: relative;
 }
 
+#task-2 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
+}
+
+#time-2 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
+}
+/* #endregion Task 2 */
+
+/* #region Task 3 */
 #task-3-container {
   height: 5rem;
   width: 100%;
@@ -75,6 +111,22 @@
   position: relative;
 }
 
+#task-3 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
+}
+
+#time-3 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
+}
+/* #endregion Task 3 */
+
+/* #region Task 4 */
 #task-4-container {
   height: 5rem;
   width: 100%;
@@ -82,6 +134,22 @@
   position: relative;
 }
 
+#task-4 {
+  font-family: "Roboto";
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.09rem;
+}
+
+#time-4 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
+}
+/* #endregion Task 4 */
+
+/* #region Task 5 */
 #task-5-container {
   height: 5rem;
   width: 100%;
@@ -89,49 +157,25 @@
   position: relative;
 }
 
-#task-1 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-}
-
-#task-2 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-}
-
-#task-3 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-}
-
-#task-4 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-}
-
 #task-5 {
   font-family: "Roboto";
   margin-bottom: 0.5rem;
-}
-
-#time-1 {
-  font-family: "Roboto";
-}
-
-#time-2 {
-  font-family: "Roboto";
-}
-
-#time-3 {
-  font-family: "Roboto";
-}
-
-#time-4 {
-  font-family: "Roboto";
+  letter-spacing: 0.09rem;
 }
 
 #time-5 {
   font-family: "Roboto";
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 0.09rem;
+  font-size: 1rem;
+}
+/* #endregion Task 5 */
+
+#add-event {
+  text-align: center;
+  position: relative;
+  top: 10rem;
 }
 
 .white-line {
@@ -143,5 +187,6 @@
 }
 
 .task-list-dot {
-  width: 4%;
+  width: 3%;
+  margin-right: 0.5rem;
 }
