@@ -1,8 +1,12 @@
 window.addEventListener("load", main());
 
-function main() {}
+function main() {
+  getMonthForTitel();
+}
 
-const date = new Date();
+function getMonthForTitel() {
+  const date = new Date();
+
 
 const monthDays = document.querySelector(".days");
 
@@ -32,4 +36,5 @@ let days = "";
 for (let i = 1; i <= lastDay; i++) {
   days += `<div>${i}</div>`;
   monthDays.innerHTML = days;
+
 }
