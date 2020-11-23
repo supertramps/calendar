@@ -70,7 +70,21 @@ document.querySelector(".next").addEventListener("click", () => {
   renderCalendar();
 });
 
+window.addEventListener("load", main());
+
 function main() {
   renderCalendar();
+  addEventListeners();
 }
-window.addEventListener("load", main());
+
+function addEventListeners() {
+  document.querySelector(".prev").addEventListener("click", () => {
+    date.setMonth(date.getMonth() - 1);
+    renderCalendar();
+  });
+  
+  document.querySelector(".next").addEventListener("click", () => {
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar();
+  });
+}
