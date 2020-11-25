@@ -1,0 +1,37 @@
+@media only screen and (max-width: 900px) {
+  .calendar {
+    display: none;
+  }
+
+  .sidebar {
+    margin-left: 0 !important;
+  }
+
+  .container {
+    position: absolute;
+    top: 5rem;
+  }
+
+  .sidebar {
+    box-shadow: 2px 2px 30px #13181d;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .container {
+    width: 80%;
+    height: 60%;
+    top: 5rem;
+    bottom: 0;
+  }
+
+  .sidebar {
+    bottom: 0;
+    height: 30rem;
+    top: 9rem;
+  }
+
+  html {
+    font-size: 50% !important;
+  }
+}
