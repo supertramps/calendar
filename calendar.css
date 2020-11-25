@@ -5,7 +5,7 @@
 }
 /* HTML font-sized changed so 1 rem = 10px */
 html {
-  font-size: 62.5%;
+  font-size: 62.5% !important;
   height: 100%;
   background: #1e272e;
 }
