@@ -87,6 +87,7 @@ window.addEventListener("load", main());
 function main() {
   renderCalendar();
   addEventListeners();
+  printPhraseAndTimeToDom();
 }
 
 /**
