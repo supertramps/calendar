@@ -11,9 +11,6 @@ html {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   font-family: "Space Mono";
 }
@@ -31,8 +28,7 @@ body {
 /* Calendar sizing and color */
 .calendar {
   width: 60rem;
-  height: 60rem;
-  background: #1e272e;
+  height: 65rem;
 }
 
 .month {
@@ -131,4 +127,8 @@ body {
   position: relative;
   right: 2rem;
   top: 2.5rem;
+}
+
+.landing-page-text {
+  margin-top: -2.1rem;
 }
