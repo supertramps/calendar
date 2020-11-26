@@ -50,6 +50,9 @@
   font-family: "Roboto";
 }
 
+.todo-container {
+}
+
 .task-title {
   height: 3rem;
   width: 100%;
