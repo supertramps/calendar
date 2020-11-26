@@ -66,13 +66,13 @@
   font-size: 2rem;
   font-weight: 400;
   position: relative;
+  padding-bottom: 2rem;
 }
 
 .todo-container span {
   margin-left: 2rem;
   font-size: 1.3rem;
   font-weight: 400;
-  padding-bottom: 2rem;
   position: relative;
 }
 
@@ -85,15 +85,17 @@
   font-size: 2rem;
   font-weight: 400;
 }
+
 .task-time {
   margin-left: 2rem;
   padding-bottom: 2rem;
   font-size: 1.5rem;
 }
+
 #add-event {
   text-align: center;
   position: relative;
-  top: 60rem;
+  top: 35rem;
 }
 
 .white-line {

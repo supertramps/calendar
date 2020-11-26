@@ -24,13 +24,13 @@ function renderToDos() {
   const toDoContainer = document.querySelector(".todo-container");
 
   for (let i = 0; i < toDosState.length; i++) {
-    let appointmentTitle = document.createElement("h2");
     let appointmentTime = document.createElement("span");
+    let appointmentTitle = document.createElement("h2");
 
-    appointmentTitle.innerHTML = toDosState[i].title;
     appointmentTime.innerHTML = toDosState[i].time;
+    appointmentTitle.innerHTML = toDosState[i].title;
 
-    toDoContainer.append(appointmentTitle, appointmentTime);
+    toDoContainer.append(appointmentTime, appointmentTitle);
   }
 }
 
