@@ -1,8 +1,18 @@
-const todosState = [
+const toDosState = [
   {
     title: "Middag med katten",
     date: new Date(),
     time: "19:00",
+  },
+  {
+    title: "Middag med pappsen",
+    date: new Date(),
+    time: "17:00",
+  },
+  {
+    title: "Middag med poopsen",
+    date: new Date(),
+    time: "18:00",
   },
 ];
 
@@ -12,15 +22,17 @@ function addToDos() {
 
 function renderToDos() {
   const toDoContainer = document.querySelector(".todo-container");
-  toDoContainer.innerHTML = "";
+  
+  for (let i = 0; i < toDosState.length; i++) {
+    let appointmentTitle = document.createElement('h2');
+    let appointmentTime = document.createElement('span');
+  
+    appointmentTitle.innerHTML = toDosState[i].title;
+    appointmentTime.innerHTML = toDosState[i].time;
 
-  for (const todo of todosState) {
-    let appointment = "";
 
-    appointment += `<h2 class="task-title">${todo.title}</h2>`;
-    //  appointment += '</br>';
-    appointment += `<span class="task-time">${todo.time}</span>`;
-    toDoContainer.innerHTML = appointment;
+    toDoContainer.append(appointmentTitle, appointmentTime);
+
   }
 }
 
