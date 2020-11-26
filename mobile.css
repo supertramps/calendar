@@ -10,11 +10,16 @@
   .container {
     position: absolute;
     top: 5rem;
+    height: 100%;
   }
 
   .sidebar {
     box-shadow: 2px 2px 30px #13181d;
     display: flex;
+  }
+
+  html {
+    font-size: 55% !important;
   }
 }
 
@@ -29,10 +34,10 @@
   .sidebar {
     bottom: 0;
     height: 30rem;
-    top: 9rem;
+    top: 11rem;
   }
 
   html {
-    font-size: 50% !important;
+    font-size: 45% !important;
   }
 }
