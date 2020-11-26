@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="calendar.css" />
+    <link rel="stylesheet" href="mobile.css" />
     <link rel="stylesheet" href="todo-list.css" />
     <link
       rel="stylesheet"
@@ -22,17 +23,23 @@
     />
     <title>Calendar</title>
 
+
     <script defer src="./JavaScript/todos.js"></script>
+    <script defer src="./JavaScript/landing_text.js"></script>
     <script defer src="./JavaScript/main.js"></script>
     <script src="./JavaScript/swedish_holidays.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="calendar">
+        <div class="landing-page-text">
+          <h2 id="random-landing-text"><!-- Code injected by js --></h2>
+          <h3 id="landing-time"><!-- Code injected by js --></h3>
+        </div>
         <div class="month">
           <i class="fas fa-angle-left prev"></i>
           <div class="date">
-            <h1> <!-- CODE INJECTED BY JS --> </h1>
+            <h1><!-- CODE INJECTED BY JS --></h1>
           </div>
           <i class="fas fa-angle-right next"></i>
         </div>
@@ -50,6 +57,7 @@
         </div>
       </div>
       <div class="sidebar">
+
 
         <div class="new-event-container" id="newEventContainer">
           <h4>New event</h4>
@@ -71,6 +79,8 @@
 
         </div>
         <p id="location">Göteborg</p>
+
+        <p id="location">Planet Earth</p>
         <p id="time">15:32</p>
         <div class="white-line"></div>
         <p class="task-list-header">Upcoming</p>

@@ -1,5 +1,3 @@
-
-
 const date = new Date();
 
 /**
@@ -11,6 +9,7 @@ const renderCalendar = () => {
 
   const monthDays = document.querySelector(".days");
 
+  //Returns the last date of the month.
   const lastDay = new Date(
     date.getFullYear(),
     date.getMonth() + 1,
@@ -25,6 +24,7 @@ const renderCalendar = () => {
     0
   ).getDate();
 
+  //Returns the last day of the month. .getDay returns the index number of the weekday instead of the date.
   const lastDayIndex = new Date(
     date.getFullYear(),
     date.getMonth(),
@@ -72,7 +72,6 @@ const renderCalendar = () => {
     } else {
       days += `<div id="${i}">${i}</div>`;
     }
-    monthDays.innerHTML = days;
   }
 
   //Fills calender with days from next month
@@ -85,12 +84,11 @@ const renderCalendar = () => {
 //EventListener for running main function on page load
 window.addEventListener("load", main());
 
-
-
 function main() {
   renderCalendar();
   addEventListeners();
   addToDos();
+  printPhraseAndTimeToDom();
 }
 
 /**

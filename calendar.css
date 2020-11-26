@@ -5,15 +5,12 @@
 }
 /* HTML font-sized changed so 1 rem = 10px */
 html {
-  font-size: 62.5%;
+  font-size: 62.5% !important;
   height: 100%;
   background: #1e272e;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   font-family: "Space Mono";
 }
@@ -31,12 +28,11 @@ body {
 /* Calendar sizing and color */
 .calendar {
   width: 60rem;
-  height: 60rem;
-  background: #1e272e;
+  height: 65rem;
 }
 
 .month {
-  width: 100%;
+  width: 99%;
   height: 7rem;
   background: linear-gradient(180deg, #485460 0%, rgba(72, 84, 96, 0) 100%);
   display: flex;
@@ -103,9 +99,9 @@ body {
   justify-content: flex-end;
   background: linear-gradient(180deg, #485460 0%, rgba(72, 84, 96, 0) 100%);
   transition: background-color 0.2s;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   padding-inline-end: 0.5rem;
-  border: solid 1px rgba(0, 0, 0, 0.4);
+  border: solid 1px rgba(0, 0, 0, 0.7);
 }
 
 .days div:hover:not(.today) {
@@ -117,7 +113,6 @@ body {
 .prev-date,
 .next-date {
   opacity: 0.5;
-  border: none !important;
 
   background: linear-gradient(
     180deg,
@@ -132,6 +127,7 @@ body {
   right: 2rem;
   top: 2.5rem;
 }
+
 
 
 .todo-container {
@@ -186,3 +182,8 @@ body {
 }
 
 /*#endregion New Event */
+
+.landing-page-text {
+  margin-top: -2.1rem;
+}
+
