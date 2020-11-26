@@ -1,3 +1,7 @@
+
+
+
+/* To do list container*/
 .sidebar {
   height: 65rem;
   width: 30rem;
@@ -61,6 +65,7 @@
   font-family: "Roboto";
 }
 
+/* To do items in container  */
 .todo-container h2 {
   margin-left: 2rem;
   font-size: 2rem;
@@ -115,6 +120,7 @@
 .hidden {
   display: none;
 }
+
 .new-event-container {
   position: absoulute;
   width: 80%;

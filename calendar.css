@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* HTML font-sized changed so 1 rem = 10px */
 html {
   font-size: 62.5% !important;
@@ -31,6 +32,7 @@ body {
   height: 65rem;
 }
 
+/* Head background for month title */
 .month {
   width: 99%;
   height: 7rem;
@@ -57,6 +59,7 @@ body {
   margin-bottom: 0.6rem;
 }
 
+/* The weekdays above the calendar */
 .weekdays {
   width: 100%;
   height: 5rem;
@@ -65,7 +68,6 @@ body {
   align-items: center;
 }
 
-/* The weekdays above the calendar */
 .weekdays div {
   font-size: 2rem;
   font-weight: 400;
@@ -76,17 +78,12 @@ body {
   align-items: center;
 }
 
+/* Days of the month pattern */
 .days {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 0.2rem;
-}
-
-/* Highlights todays date */
-.today {
-  color: #1e272e;
-  background: #05c46b !important;
 }
 
 /* The dates inside the calendar */
@@ -104,9 +101,12 @@ body {
   border: solid 1px rgba(0, 0, 0, 0.7);
 }
 
-.days div:hover:not(.today) {
-  background-color: #485460;
-  cursor: pointer;
+
+
+/* Highlights todays date */
+.today {
+  color: #1e272e;
+  background: #05c46b !important;
 }
 
 /* The days from previous and next month */
@@ -126,8 +126,4 @@ body {
   position: relative;
   right: 2rem;
   top: 2.5rem;
-}
-
-.landing-page-text {
-  margin-top: -2.1rem;
 }
