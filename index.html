@@ -58,24 +58,23 @@
       </div>
       <div class="sidebar">
 
-        <div class="hidden">
+        <div id="toggleHidden" class="hidden">
           <div class="new-event-container" id="newEventContainer">
             <h4>New event</h4>
             
-            <form>
+            <form id="add-event-form">
               <label for="what">What?</label></br>
               <input type="text" id="what-event" name="what"></br>
               <label for="when">When?</label></br>
               <input type="text" id="when-event" name="when"></br>
               <label for="where">Where?</label></br>
               <input type="text" id="where-event" name="where"></br>
+              <input type="submit" value="Add Event">
             </form>
-            
-            
-            
-            
-            <button class="add-event-button" id="addEventButton">Add event</button>
-            
+            <div>
+              
+              <button class="add-event-button" id="close-event-window">Close</button>
+            </div>
             
           </div>
         </div>
@@ -88,18 +87,18 @@
             
             
             
-            <div class="todo-container" id="task-1-container">
-              
-            </div>     
-            <div id="add-event">
-              
-              <p>
+            <div class="todo-container" >
+              <!-- CODE INJECTED BY JS -->
+            </div>
+           
+     
+            <div class="add-event">
+              <button id="new-event-button">
                 <i id="plus-icon" class="fas fa-plus fa-xs"></i>
                 Add event
-              </p>
+              </button>
             </div>
             
-          </div>
         </div>
       </body>
       </html>

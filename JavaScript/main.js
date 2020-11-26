@@ -89,6 +89,7 @@ function main() {
   addEventListeners();
   addToDos();
   printPhraseAndTimeToDom();
+  openAddEventWindow();
 }
 
 /**

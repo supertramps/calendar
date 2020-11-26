@@ -51,6 +51,7 @@
 }
 
 .todo-container {
+  z-index: 0;
 }
 
 .task-title {
@@ -67,10 +68,10 @@
   padding-bottom: 2rem;
   font-size: 1.5rem;
 }
-#add-event {
+.add-event {
   text-align: center;
   position: relative;
-  top: 30rem;
+  bottom: 0;
 }
 
 .white-line {
@@ -90,15 +91,16 @@
 .hidden {
   display: none;
 }
+
 .new-event-container {
-  position: absoulute;
-  width: 80%;
-  height: 60%;
+  position: relative;
+  width: 25rem;
+  height: 40rem;
   margin-top: 12rem;
   padding: 1.4rem;
 
   background: #1e272e;
-  opacity: 0.9;
+  opacity: 1;
   border-radius: 20px;
 
   z-index: 1000;
