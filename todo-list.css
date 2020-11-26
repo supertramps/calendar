@@ -1,6 +1,5 @@
 .sidebar {
   height: 65rem;
-  background-color: burlywood;
   width: 30rem;
   margin-left: 2rem;
   background: url(./imgs/Task-bar.png),
@@ -31,18 +30,13 @@
   flex-direction: column;
 }
 
-#task-list {
-  position: absolute;
-  top: 30rem;
-  left: 2rem;
-}
-
 .task-list-header {
   position: absolute;
   top: 23rem;
   left: 2rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: "Roboto";
+  font-weight: 700;
 }
 
 #task-list-container {
@@ -55,127 +49,28 @@
   font-size: 1.3rem;
   font-family: "Roboto";
 }
-/* #region Task 1 */
 
-#task-1-container {
-  height: 5rem;
+.todo-container {
+}
+
+.task-title {
+  height: 3rem;
   width: 100%;
   margin-left: 2rem;
   position: relative;
   font-family: "Roboto";
+  font-size: 2rem;
+  font-weight: 400;
 }
-
-#task-1 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.09rem;
-}
-
-#time-1 {
-  font-family: "Roboto";
-  font-weight: bold;
-  font-style: normal;
-  letter-spacing: 0.09rem;
-  font-size: 1rem;
-}
-/* #endregion Task 1 */
-
-/* #region Task 2 */
-#task-2-container {
-  height: 5rem;
-  width: 100%;
+.task-time {
   margin-left: 2rem;
-  position: relative;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
 }
-
-#task-2 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.09rem;
-}
-
-#time-2 {
-  font-family: "Roboto";
-  font-weight: bold;
-  font-style: normal;
-  letter-spacing: 0.09rem;
-  font-size: 1rem;
-}
-/* #endregion Task 2 */
-
-/* #region Task 3 */
-#task-3-container {
-  height: 5rem;
-  width: 100%;
-  margin-left: 2rem;
-  position: relative;
-}
-
-#task-3 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.09rem;
-}
-
-#time-3 {
-  font-family: "Roboto";
-  font-weight: bold;
-  font-style: normal;
-  letter-spacing: 0.09rem;
-  font-size: 1rem;
-}
-/* #endregion Task 3 */
-
-/* #region Task 4 */
-#task-4-container {
-  height: 5rem;
-  width: 100%;
-  margin-left: 2rem;
-  position: relative;
-}
-
-#task-4 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.09rem;
-}
-
-#time-4 {
-  font-family: "Roboto";
-  font-weight: bold;
-  font-style: normal;
-  letter-spacing: 0.09rem;
-  font-size: 1rem;
-}
-/* #endregion Task 4 */
-
-/* #region Task 5 */
-#task-5-container {
-  height: 5rem;
-  width: 100%;
-  margin-left: 2rem;
-  position: relative;
-}
-
-#task-5 {
-  font-family: "Roboto";
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.09rem;
-}
-
-#time-5 {
-  font-family: "Roboto";
-  font-weight: bold;
-  font-style: normal;
-  letter-spacing: 0.09rem;
-  font-size: 1rem;
-}
-/* #endregion Task 5 */
-
 #add-event {
   text-align: center;
   position: relative;
-  top: 10rem;
+  top: 30rem;
 }
 
 .white-line {
@@ -190,3 +85,53 @@
   width: 3%;
   margin-right: 0.5rem;
 }
+
+/* #region New Event */
+.hidden {
+  display: none;
+}
+.new-event-container {
+  position: absoulute;
+  width: 80%;
+  height: 60%;
+  margin-top: 12rem;
+  padding: 1.4rem;
+
+  background: #1e272e;
+  opacity: 0.9;
+  border-radius: 20px;
+
+  z-index: 1000;
+
+  font-family: "Space Mono";
+  font-size: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-event-container input {
+  border-radius: 5px;
+  border: none;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.new-event-container h4 {
+  font-size: 1.8rem;
+}
+
+.new-event-container button {
+  background-color: #05c46b;
+  color: white;
+  border-radius: 5px;
+  border: none;
+
+  height: 2.5rem;
+  width: 8rem;
+}
+
+/*#endregion New Event */

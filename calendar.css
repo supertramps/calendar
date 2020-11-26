@@ -32,7 +32,7 @@ body {
 }
 
 .month {
-  width: 100%;
+  width: 99%;
   height: 7rem;
   background: linear-gradient(180deg, #485460 0%, rgba(72, 84, 96, 0) 100%);
   display: flex;

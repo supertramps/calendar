@@ -30,6 +30,18 @@ function renderToDos() {
     appointmentTitle.innerHTML = toDosState[i].title;
     appointmentTime.innerHTML = toDosState[i].time;
 
+
     toDoContainer.append(appointmentTitle, appointmentTime);
+
   }
 }
+
+//Shows current time in the ToDo-list
+const toDoTime = document.getElementById("time");
+setInterval(function updateTime() {
+  const date = new Date();
+  var string = date.toLocaleTimeString([], { timeStyle: "short" });
+  console.log(string);
+
+  toDoTime.innerHTML = string;
+}, 1000);
