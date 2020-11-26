@@ -82,3 +82,50 @@
   width: 3%;
   margin-right: 0.5rem;
 }
+
+/* #region New Event */
+.new-event-container {
+  position: absoulute;
+  width: 80%;
+  height: 60%;
+  margin-top: 12rem;
+  padding: 1.4rem;
+
+  background: #1e272e;
+  opacity: 0.9;
+  border-radius: 20px;
+
+  z-index: 1000;
+
+  font-family: "Space Mono";
+  font-size: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-event-container input {
+  border-radius: 5px;
+  border: none;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.new-event-container h4 {
+  font-size: 1.8rem;
+}
+
+.new-event-container button {
+  background-color: #05c46b;
+  color: white;
+  border-radius: 5px;
+  border: none;
+
+  height: 2.5rem;
+  width: 8rem;
+}
+
+/*#endregion New Event */
