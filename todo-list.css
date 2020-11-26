@@ -87,6 +87,9 @@
 }
 
 /* #region New Event */
+.hidden {
+  display: none;
+}
 .new-event-container {
   position: absoulute;
   width: 80%;
