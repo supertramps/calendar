@@ -22,17 +22,15 @@ function addToDos() {
 
 function renderToDos() {
   const toDoContainer = document.querySelector(".todo-container");
-  
+
   for (let i = 0; i < toDosState.length; i++) {
-    let appointmentTitle = document.createElement('h2');
-    let appointmentTime = document.createElement('span');
-  
+    let appointmentTitle = document.createElement("h2");
+    let appointmentTime = document.createElement("span");
+
     appointmentTitle.innerHTML = toDosState[i].title;
     appointmentTime.innerHTML = toDosState[i].time;
 
-
     toDoContainer.append(appointmentTitle, appointmentTime);
-
   }
 }
 
