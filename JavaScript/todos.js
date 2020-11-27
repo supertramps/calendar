@@ -36,13 +36,13 @@ form.addEventListener("submit", (event) => {
 });
 
 ///// HÄÄÄÄÄRRR ÄÄÄÄÄR DUU SEEEBSSSS
-const toDoForRemoval = document.querySelector('.todo');
+const toDoForRemoval = document.querySelector(".todo");
 function removeToDo() {
-  toDoForRemoval.addEventListener('click', event => {
-    if (event.target.classList.contains('.todo')) {
-      console.log('peepeepoopoo')
+  toDoForRemoval.addEventListener("click", (event) => {
+    if (event.target.classList.contains(".todo")) {
+      console.log("peepeepoopoo");
     }
-  })
+  });
 }
 
 /**
@@ -74,15 +74,14 @@ function renderToDos() {
   for (let i = 1; i < toDosState.length; i++) {
     let appointmentTitle = document.createElement("h2");
     appointmentTitle.className = "todo";
-    appointmentTitle.setAttribute('id', i);
+    appointmentTitle.setAttribute("id", i);
     let appointmentTime = document.createElement("span");
-  
 
     appointmentTitle.innerHTML = i + ". " + toDosState[i].title;
     appointmentTime.innerHTML = toDosState[i].date + " " + toDosState[i].time;
 
     toDoContainer.append(appointmentTitle, appointmentTime);
-    removeToDo();
+    
   }
 }
 
