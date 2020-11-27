@@ -90,7 +90,13 @@ function renderToDos() {
       const getDaysDiv = document.querySelectorAll(".toDoMark");
       for (let index = 0; index < getDaysDiv.length; index++) {
         if (getDaysDiv[index].id === dateOfToDo) {
-          document.getElementById(dateOfToDo).style.color = "red";
+          const eventDay = document.getElementById(dateOfToDo);
+          eventDay.style.color = "red";
+
+          // creates a <p> in the calendar, TODO: make the <p> show number of events on that day
+          let eventCounter = document.createElement("p");
+          eventCounter.innerHTML = "";
+          eventDay.append(eventCounter);
         }
       }
     }
