@@ -92,6 +92,19 @@ const renderCalendar = () => {
     days += `<div class="next-date">${j}</div>`;
     monthDays.innerHTML = days;
   }
+
+  function renderToDosInCalendar() {
+    // Match ID for days with toDosState.date and then render to calendar
+    // if toDosState.date = calendarDate.ID render number to calendar
+
+    const dateID = document.querySelector(".days > div");
+    for (let index = 0; index <= 31; index++) {
+      if (!dateID.classList.contains("prev-dates")) {
+        console.log(dateID);
+      }
+    }
+  }
+  renderToDosInCalendar();
 };
 
 /**

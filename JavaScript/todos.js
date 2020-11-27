@@ -83,6 +83,7 @@ function renderToDos() {
     toDosContainer.append(containerDiv);
   }
 }
+
 /**
  * Renders the time in the sidebar
  */
