@@ -7,5 +7,4 @@ function main() {
   printPhraseAndTimeToDom();
   openAddEventWindow();
   toDoListClock();
-  renderToDosInCalendar();
 }

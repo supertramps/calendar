@@ -1,4 +1,5 @@
 let toDosState = [];
+
 /**
  * function for adding to the array of to dos
  */
@@ -72,15 +73,28 @@ function renderToDos() {
     appointmentTitle.innerHTML = i + ". " + toDosState[i].title;
     appointmentTime.innerHTML = toDosState[i].date + " " + toDosState[i].time;
 
+    // remove todo
     containerDiv.addEventListener("click", () => {
       toDosState.splice(i, 1);
       renderToDos();
+      markDayWithToDo();
+      renderCalendar();
       //ADD RENDER CALENDAR HERE
-      console.log(toDosState);
     });
-
     containerDiv.append(appointmentTitle, appointmentTime);
     toDosContainer.append(containerDiv);
+
+    // Targets days with same ID as event date
+    let dateOfToDo = toDosState[i].date;
+    function markDayWithToDo() {
+      const getDaysDiv = document.querySelectorAll(".toDoMark");
+      for (let index = 0; index < getDaysDiv.length; index++) {
+        if (getDaysDiv[index].id === dateOfToDo) {
+          document.getElementById(dateOfToDo).style.color = "red";
+        }
+      }
+    }
+    markDayWithToDo();
   }
 }
 
@@ -94,5 +108,5 @@ function toDoListClock() {
     var string = date.toLocaleTimeString([], { timeStyle: "short" });
 
     toDoTime.innerHTML = string;
-  }, 1);
+  }, 10);
 }

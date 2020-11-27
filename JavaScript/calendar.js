@@ -1,4 +1,5 @@
 const date = new Date();
+const dateID = "";
 
 /**
  * Renders and updates the calendar depending on month
@@ -6,7 +7,6 @@ const date = new Date();
 const renderCalendar = () => {
   //Variables for calendar
   date.setDate(7);
-
   const monthDays = document.querySelector(".days");
 
   //Returns the last date of the month.
@@ -81,9 +81,9 @@ const renderCalendar = () => {
       date.getMonth() === new Date().getMonth() &&
       date.getFullYear() === new Date().getFullYear()
     ) {
-      days += `<div id="${dateID}" class="today">${i}</div>`;
+      days += `<div id="${dateID}" class="today toDoMark">${i}</div>`;
     } else {
-      days += `<div id="${dateID}">${i}</div>`;
+      days += `<div id="${dateID}" class="toDoMark">${i}</div>`;
     }
   }
 
@@ -93,18 +93,18 @@ const renderCalendar = () => {
     monthDays.innerHTML = days;
   }
 
-  function renderToDosInCalendar() {
-    // Match ID for days with toDosState.date and then render to calendar
-    // if toDosState.date = calendarDate.ID render number to calendar
+  //   function renderToDosInCalendar() {
+  //     // Match ID for days with toDosState.date and then render to calendar
+  //     // if toDosState.date = calendarDate.ID render number to calendar
 
-    const dateID = document.querySelector(".days > div");
-    for (let index = 0; index <= 31; index++) {
-      if (!dateID.classList.contains("prev-dates")) {
-        console.log(dateID);
-      }
-    }
-  }
-  renderToDosInCalendar();
+  //     const date = document.querySelector(".days > div");
+  //     for (let index = 0; index <= 31; index++) {
+  //       if (!date.classList.contains("prev-dates")) {
+  //         console.log(date);
+  //       }
+  //     }
+  //   }
+  //   renderToDosInCalendar();
 };
 
 /**
@@ -116,11 +116,13 @@ function addEventListeners() {
   document.querySelector(".prev").addEventListener("click", () => {
     date.setMonth(date.getMonth() - 1);
     renderCalendar();
+    renderToDos();
   });
 
   //Use right arrow to change to next month
   document.querySelector(".next").addEventListener("click", () => {
     date.setMonth(date.getMonth() + 1);
     renderCalendar();
+    renderToDos();
   });
 }
