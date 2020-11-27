@@ -1,6 +1,6 @@
 let toDosState = [];
 /**
- * function to add a To dos to the array of to dos
+ * function for adding to the array of to dos
  */
 function addToDos(title, date, time) {
   const toDo = {
@@ -11,7 +11,11 @@ function addToDos(title, date, time) {
   toDosState.push(toDo);
 }
 
+//Getting the form for adding events
 const form = document.getElementById("add-event-form");
+/**
+ * function for adding user input as an object (adds to the toDo object)
+ */
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const whatInput = document.getElementById("what-event");
@@ -26,18 +30,20 @@ form.addEventListener("submit", (event) => {
     whatInput.value = "";
     whenInput.value = "";
     whereInput.value = "";
-    whatInput.focus();
-    whenInput.focus();
-
     console.log(toDosState);
-    
   }
-
-  console.log(what);
-  console.log(where);
-  console.log(when);
   renderToDos();
 });
+
+///// HÄÄÄÄÄRRR ÄÄÄÄÄR DUU SEEEBSSSS
+const toDoForRemoval = document.querySelector('.todo');
+function removeToDo() {
+  toDoForRemoval.addEventListener('click', event => {
+    if (event.target.classList.contains('.todo')) {
+      console.log('peepeepoopoo')
+    }
+  })
+}
 
 /**
  * function to open the Add Event meny
@@ -63,20 +69,25 @@ function openAddEventWindow() {
  */
 function renderToDos() {
   const toDoContainer = document.querySelector(".todo-container");
+  toDoContainer.innerHTML = "";
 
   for (let i = 1; i < toDosState.length; i++) {
     let appointmentTitle = document.createElement("h2");
+    appointmentTitle.className = "todo";
+    appointmentTitle.setAttribute('id', i);
     let appointmentTime = document.createElement("span");
+  
 
-    appointmentTitle.innerHTML = toDosState[i].title;
-    appointmentTime.innerHTML = toDosState[i].time;
+    appointmentTitle.innerHTML = i + ". " + toDosState[i].title;
+    appointmentTime.innerHTML = toDosState[i].date + " " + toDosState[i].time;
 
     toDoContainer.append(appointmentTitle, appointmentTime);
+    removeToDo();
   }
 }
 
 //Shows current time in the ToDo-list
-// ADD THIS TO A FUNCTION FOR FUCK SAKE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! bad code bad code bad code
+// ADD THIS TO A FUNCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! bad code bad code bad code
 const toDoTime = document.getElementById("time");
 setInterval(function updateTime() {
   const date = new Date();

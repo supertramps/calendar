@@ -1,104 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="calendar.css" />
-    <link rel="stylesheet" href="mobile.css" />
-    <link rel="stylesheet" href="todo-list.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <title>Calendar</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="calendar.css" />
+  <link rel="stylesheet" href="mobile.css" />
+  <link rel="stylesheet" href="todo-list.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <title>Calendar</title>
 
 
-    <script defer src="./JavaScript/todos.js"></script>
-    <script defer src="./JavaScript/landing_text.js"></script>
-    <script defer src="./JavaScript/main.js"></script>
-    <script src="./JavaScript/swedish_holidays.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="calendar">
-        <div class="landing-page-text">
-          <h2 id="random-landing-text"><!-- Code injected by js --></h2>
-          <h3 id="landing-time"><!-- Code injected by js --></h3>
+  <script defer src="./JavaScript/todos.js"></script>
+  <script defer src="./JavaScript/landing_text.js"></script>
+  <script defer src="./JavaScript/main.js"></script>
+  <script src="./JavaScript/swedish_holidays.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="calendar">
+      <div class="landing-page-text">
+        <h2 id="random-landing-text">
+          <!-- Code injected by js -->
+        </h2>
+        <h3 id="landing-time">
+          <!-- Code injected by js -->
+        </h3>
+      </div>
+      <div class="month">
+        <i class="fas fa-angle-left prev"></i>
+        <div class="date">
+          <h1>
+            <!-- CODE INJECTED BY JS -->
+          </h1>
         </div>
-        <div class="month">
-          <i class="fas fa-angle-left prev"></i>
-          <div class="date">
-            <h1><!-- CODE INJECTED BY JS --></h1>
+        <i class="fas fa-angle-right next"></i>
+      </div>
+      <div class="weekdays">
+        <div>Mo</div>
+        <div>Tu</div>
+        <div>We</div>
+        <div>Th</div>
+        <div>Fr</div>
+        <div>Sa</div>
+        <div>Su</div>
+      </div>
+      <div class="days">
+        <!-- Days inserted by JavaScript -->
+      </div>
+    </div>
+    <div class="sidebar">
+
+      <div id="toggleHidden" class="hidden">
+        <div class="new-event-container" id="newEventContainer">
+          <h4>New event</h4>
+
+          <form id="add-event-form">
+            <label for="what">What?</label></br>
+            <input type="text" id="what-event" name="what"></br>
+            <label for="when">When?</label></br>
+            <input type="text" id="when-event" name="when"></br>
+            <label for="where">What day?</label></br>
+            <input type="date" id="where-event" name="where"></br>
+            <input class="submit-btn" id="btn-for-submit" type="submit" value="Add Event">
+          </form>
+          <div>
+            <button id="close-event-window">Close</button>
           </div>
-          <i class="fas fa-angle-right next"></i>
-        </div>
-        <div class="weekdays">
-          <div>Mo</div>
-          <div>Tu</div>
-          <div>We</div>
-          <div>Th</div>
-          <div>Fr</div>
-          <div>Sa</div>
-          <div>Su</div>
-        </div>
-        <div class="days">
-          <!-- Days inserted by JavaScript -->
+
         </div>
       </div>
-      <div class="sidebar">
 
-        <div id="toggleHidden" class="hidden">
-          <div class="new-event-container" id="newEventContainer">
-            <h4>New event</h4>
-            
-            <form id="add-event-form">
-              <label for="what">What?</label></br>
-              <input type="text" id="what-event" name="what"></br>
-              <label for="when">When?</label></br>
-              <input type="text" id="when-event" name="when"></br>
-              <label for="where">What day?</label></br>
-              <input type="date" id="where-event" name="where"></br>
-              <input class="submit-btn" id="btn-for-submit" type="submit" value="Add Event">
-            </form>
-            <div>
-              <button id="close-event-window">Close</button>
-            </div>
-            
-          </div>
+      <p id="location">Planet Earth</p>
+      <p id="time"></p>
+      <div class="white-line"></div>
+      <p class="task-list-header">Upcoming</p>
+      <div id="task-list-container">
+        <div class="todo-container">
+          <!-- CODE INJECTED BY JS -->
         </div>
-          
-          <p id="location">Planet Earth</p>
-          <p id="time"></p>
-          <div class="white-line"></div>
-          <p class="task-list-header">Upcoming</p>
-          <div id="task-list-container">
-            
-            
-            
-            <div class="todo-container" >
-              <!-- CODE INJECTED BY JS -->
-            </div>
-           
-     
-            <div class="add-event">
-              <button id="new-event-button">
-                <i id="plus-icon" class="fas fa-plus fa-xs"></i>
-                Add event
-              </button>
-            </div>
-            
+
+        <div class="add-event">
+          <button id="new-event-button">
+            <i id="plus-icon" class="fas fa-plus fa-xs"></i>
+            Add Event
+          </button>
         </div>
-      </body>
-      </html>
-      
+
+      </div>
+</body>
+
+</html>
