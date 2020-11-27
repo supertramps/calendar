@@ -89,7 +89,7 @@ function main() {
   addEventListeners();
   printPhraseAndTimeToDom();
   openAddEventWindow();
-  addToDos();
+  
 }
 
 /**

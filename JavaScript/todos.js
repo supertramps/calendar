@@ -35,15 +35,6 @@ form.addEventListener("submit", (event) => {
   renderToDos();
 });
 
-///// HÄÄÄÄÄRRR ÄÄÄÄÄR DUU SEEEBSSSS
-const toDoForRemoval = document.querySelector(".todo");
-function removeToDo() {
-  toDoForRemoval.addEventListener("click", (event) => {
-    if (event.target.classList.contains(".todo")) {
-      console.log("peepeepoopoo");
-    }
-  });
-}
 
 /**
  * function to open the Add Event meny
@@ -68,11 +59,12 @@ function openAddEventWindow() {
  * renders the array of objects containing the ToDos to the DOM
  */
 function renderToDos() {
-  const toDoContainer = document.querySelector(".todo-container");
+  const toDosContainer = document.querySelector(".todo-container");
 
-  toDoContainer.innerHTML = "";
+  toDosContainer.innerHTML = "";
 
-  for (let i = 1; i < toDosState.length; i++) {
+  for (let i = 0; i < toDosState.length; i++) {
+    const containerDiv = document.createElement('div');
     let appointmentTitle = document.createElement("h2");
     appointmentTitle.className = "todo";
     appointmentTitle.setAttribute("id", i);
@@ -81,8 +73,15 @@ function renderToDos() {
     appointmentTitle.innerHTML = i + ". " + toDosState[i].title;
     appointmentTime.innerHTML = toDosState[i].date + " " + toDosState[i].time;
 
-    toDoContainer.append(appointmentTitle, appointmentTime);
-    
+    containerDiv.addEventListener('click', () => {
+      toDosState.splice(i, 1);
+      renderToDos();
+      //ADD RENDER CALENDAR HERE
+      console.log(toDosState);
+    })
+
+    containerDiv.append(appointmentTitle, appointmentTime);
+    toDosContainer.append(containerDiv);
 
   }
 }
