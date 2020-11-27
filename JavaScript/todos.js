@@ -35,7 +35,6 @@ form.addEventListener("submit", (event) => {
   renderToDos();
 });
 
-
 /**
  * function to open the Add Event meny
  */
@@ -64,7 +63,7 @@ function renderToDos() {
   toDosContainer.innerHTML = "";
 
   for (let i = 0; i < toDosState.length; i++) {
-    const containerDiv = document.createElement('div');
+    const containerDiv = document.createElement("div");
     let appointmentTitle = document.createElement("h2");
     appointmentTitle.className = "todo";
     appointmentTitle.setAttribute("id", i);
@@ -73,25 +72,26 @@ function renderToDos() {
     appointmentTitle.innerHTML = i + ". " + toDosState[i].title;
     appointmentTime.innerHTML = toDosState[i].date + " " + toDosState[i].time;
 
-    containerDiv.addEventListener('click', () => {
+    containerDiv.addEventListener("click", () => {
       toDosState.splice(i, 1);
       renderToDos();
       //ADD RENDER CALENDAR HERE
       console.log(toDosState);
-    })
+    });
 
     containerDiv.append(appointmentTitle, appointmentTime);
     toDosContainer.append(containerDiv);
-
   }
 }
+/**
+ * Renders the time in the sidebar
+ */
+function toDoListClock() {
+  const toDoTime = document.getElementById("time");
+  setInterval(function updateTime() {
+    const date = new Date();
+    var string = date.toLocaleTimeString([], { timeStyle: "short" });
 
-//Shows current time in the ToDo-list
-// ADD THIS TO A FUNCTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! bad code bad code bad code
-const toDoTime = document.getElementById("time");
-setInterval(function updateTime() {
-  const date = new Date();
-  var string = date.toLocaleTimeString([], { timeStyle: "short" });
-
-  toDoTime.innerHTML = string;
-}, 1000);
+    toDoTime.innerHTML = string;
+  }, 1);
+}
