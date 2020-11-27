@@ -18,7 +18,7 @@ async function fetchDays() {
     dates.push(...data.dagar);
 
     const holidays = dates.filter((date) => date.helgdag);
-    console.log(holidays);
+    // console.log(holidays);
   } catch (error) {
     console.error(error);
   }

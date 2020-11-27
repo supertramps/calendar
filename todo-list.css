@@ -55,14 +55,7 @@
 }
 
 .todo-container {
-  height: 38rem;
-  width: 100%;
-  position: relative;
-  top: 27rem;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.3rem;
-  font-family: "Roboto";
+  z-index: 0;
 }
 
 /* To do items in container  */
@@ -72,6 +65,7 @@
   font-weight: 400;
   position: relative;
   padding-bottom: 2rem;
+  margin: 0rem 1rem 0 2rem;
 }
 
 .todo-container span {
@@ -79,7 +73,10 @@
   font-size: 1.3rem;
   font-weight: 400;
   position: relative;
+  margin: 0rem 1rem 0 3rem;
 }
+
+
 
 .task-title {
   height: 3rem;
@@ -103,6 +100,7 @@
   top: 35rem;
 }
 
+
 .white-line {
   position: absolute;
   width: 25rem;
@@ -115,21 +113,42 @@
   width: 3%;
   margin-right: 0.5rem;
 }
+.add-event {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+}
+.add-event > button {
+  position: absolute;
+  bottom: 2rem;
+  right: 7rem;
 
+  background-color: #05c46b;
+  color: white;
+  border-radius: 5px;
+  border: none;
+
+  height: 2.5rem;
+  width: 15rem;
+ 
+  
+}
 /* #region New Event */
 .hidden {
   display: none;
 }
 
 .new-event-container {
-  position: absoulute;
-  width: 80%;
-  height: 60%;
+  position: relative;
+  width: 25rem;
+  height: 40rem;
   margin-top: 12rem;
   padding: 1.4rem;
 
   background: #1e272e;
-  opacity: 0.9;
+  opacity: 1;
   border-radius: 20px;
 
   z-index: 1000;
@@ -163,6 +182,12 @@
 
   height: 2.5rem;
   width: 8rem;
+}
+.submit-btn {
+  background-color: #05c46b;
+  color: white;
+  width: 8rem;
+  
 }
 
 /*#endregion New Event */
