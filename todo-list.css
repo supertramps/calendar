@@ -1,6 +1,3 @@
-
-
-
 /* To do list container*/
 .sidebar {
   height: 65rem;
@@ -9,7 +6,7 @@
   background: url(./imgs/Task-bar.png),
     linear-gradient(180deg, #3c40c6 0%, rgba(87, 95, 207, 0) 91.67%);
   position: relative;
-  bottom: 5rem;
+  bottom: 3.5rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -76,8 +73,6 @@
   margin: 0rem 1rem 0 3rem;
 }
 
-
-
 .task-title {
   height: 3rem;
   width: 100%;
@@ -99,7 +94,6 @@
   position: relative;
   top: 35rem;
 }
-
 
 .white-line {
   position: absolute;
@@ -132,8 +126,6 @@
 
   height: 2.5rem;
   width: 15rem;
- 
-  
 }
 /* #region New Event */
 .hidden {
@@ -187,7 +179,6 @@
   background-color: #05c46b;
   color: white;
   width: 8rem;
-  
 }
 
 /*#endregion New Event */
