@@ -69,6 +69,7 @@ function openAddEventWindow() {
  */
 function renderToDos() {
   const toDoContainer = document.querySelector(".todo-container");
+
   toDoContainer.innerHTML = "";
 
   for (let i = 1; i < toDosState.length; i++) {
@@ -82,6 +83,7 @@ function renderToDos() {
 
     toDoContainer.append(appointmentTitle, appointmentTime);
     
+
   }
 }
 
