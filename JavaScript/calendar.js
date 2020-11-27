@@ -63,18 +63,27 @@ const renderCalendar = () => {
 
   //Fills calendar with days from current month and highlights todays date
   for (let i = 1; i <= lastDay; i++) {
+    // adds 0 to date if date is single digit
+    let prefixDate = i;
+    if (i < 10) {
+      prefixDate = "0" + i;
+    }
+
+    // adds a 0 to month if month is single digit
+    let prefixMonth = date.getMonth() + 1;
+    if (date.getMonth() + 1 < 10) {
+      prefixMonth = "0" + (date.getMonth() + 1);
+    }
+
+    const dateID = date.getFullYear() + "-" + prefixMonth + "-" + prefixDate;
     if (
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth() &&
       date.getFullYear() === new Date().getFullYear()
     ) {
-      days += `<div id="${
-        date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + i
-      }" class="today">${i}</div>`;
+      days += `<div id="${dateID}" class="today">${i}</div>`;
     } else {
-      days += `<div id="${
-        date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + i
-      }">${i}</div>`;
+      days += `<div id="${dateID}">${i}</div>`;
     }
   }
 
