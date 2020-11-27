@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <title>Calendar</title>
+  <title>Kulender</title>
 
 
   <script defer src="./JavaScript/todos.js"></script>
@@ -23,8 +23,12 @@
 </head>
 
 <body>
-  <div class="container">
+
+  <div class="container flex justify-center align-center">
     <div class="calendar">
+      <div class="">
+        <h1>Kulender</h1>
+      </div>
       <div class="landing-page-text">
         <h2 id="random-landing-text">
           <!-- Code injected by js -->
@@ -33,7 +37,7 @@
           <!-- Code injected by js -->
         </h3>
       </div>
-      <div class="month">
+      <div class="month flex align-center justify-between">
         <i class="fas fa-angle-left prev"></i>
         <div class="date">
           <h1>
@@ -42,16 +46,16 @@
         </div>
         <i class="fas fa-angle-right next"></i>
       </div>
-      <div class="weekdays">
-        <div>Mo</div>
-        <div>Tu</div>
-        <div>We</div>
-        <div>Th</div>
-        <div>Fr</div>
-        <div>Sa</div>
-        <div>Su</div>
+      <div class="weekdays flex align-center">
+        <div class="flex justify-center align-center">Mo</div>
+        <div class="flex justify-center align-center">Tu</div>
+        <div class="flex justify-center align-center">We</div>
+        <div class="flex justify-center align-center">Th</div>
+        <div class="flex justify-center align-center">Fr</div>
+        <div class="flex justify-center align-center">Sa</div>
+        <div class="flex justify-center align-center">Su</div>
       </div>
-      <div class="days">
+      <div class="days flex flex-wrap">
         <!-- Days inserted by JavaScript -->
       </div>
     </div>
@@ -94,7 +98,7 @@
           </button>
         </div>
 
-      </div>
+  </div>
 </body>
 </html>
 
