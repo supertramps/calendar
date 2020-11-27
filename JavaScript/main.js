@@ -68,9 +68,9 @@ const renderCalendar = () => {
       date.getMonth() === new Date().getMonth() &&
       date.getFullYear() === new Date().getFullYear()
     ) {
-      days += `<div id="${i}" class="today">${i}</div>`;
+      days += `<div id="${date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + i}" class="today">${i}</div>`;
     } else {
-      days += `<div id="${i}">${i}</div>`;
+      days += `<div id="${date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + i}">${i}</div>`;
     }
   }
 
