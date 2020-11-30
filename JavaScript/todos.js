@@ -1,16 +1,13 @@
-let toDosState = [];
-let eventCountForDate = [];
+let toDosStates = {};
 
-/**
- * function for adding to the array of to dos
- */
 function addToDos(title, date, time) {
-  const toDo = {
-    title,
-    date,
-    time,
-  };
-  toDosState.push(toDo);
+  const toDo = { title, date, time };
+
+  if (toDosStates[date] === undefined) {
+    toDosStates[date] = [toDo];
+  } else {
+    toDosStates[date].push(toDo);
+  }
 }
 
 /**
@@ -46,43 +43,7 @@ form.addEventListener("submit", (event) => {
     whatInput.value = "";
     whenInput.value = "";
     dateInput.value = "";
-
-    if (eventCountForDate.length < 1) {
-      addToDosAmount(date, +1);
-      console.log("if");
-    } else if (
-      eventCountForDate.some(
-        (eventCountForDate) => eventCountForDate.dateOf === date
-      )
-    ) {
-      console.log("nånting");
-      // Här ska koden plussa på COUNT
-      [].count;
-    } else {
-      addToDosAmount(date, +1);
-      console.log("else");
-    }
-
-    // VI ÄR HÄR NU!!!
-    // for (let i = 0; i < toDosState.length; i++) {
-    //   console.log("for");
-    //   if (toDosState.length < 1) {
-    //     addToDosAmount(date, +1);
-    //     console.log("if");
-    //     console.log(toDosState[i]);
-    //   } else if (
-    //     eventCountForDate.count !== undefined &&
-    //     eventCountForDate.count === date
-    //   ) {
-    //     console.log("else if");
-    //     eventCountForDate[i].count++;
-    //   } else {
-    //     addToDosAmount(date, +1);
-    //     console.log("else");
-    //   }
-    // }
-
-    console.log(eventCountForDate);
+    console.log(toDosStates);
   }
 
   renderToDos();
@@ -113,43 +74,43 @@ function openAddEventWindow() {
 function renderToDos() {
   const toDosContainer = document.querySelector(".todo-container");
   toDosContainer.innerHTML = "";
-  for (let i = 0; i < toDosState.length; i++) {
+
+  for (const [date, toDosState] of Object.entries(toDosStates)) {
     const containerDiv = document.createElement("div");
     let appointmentTitle = document.createElement("h2");
     appointmentTitle.className = "todo";
-    appointmentTitle.setAttribute("id", i);
-    let appointmentTime = document.createElement("span");
 
-    appointmentTitle.innerHTML = i + ". " + toDosState[i].title;
-    appointmentTime.innerHTML = toDosState[i].date + " " + toDosState[i].time;
+    for (let i = 0; i < toDosState.length; i++) {
+      appointmentTitle.setAttribute("id", i);
+      let appointmentTime = document.createElement("span");
+      appointmentTitle.innerHTML = toDosState[i].title;
+      appointmentTime.innerHTML = date + " " + toDosState[i].time;
 
-    // remove todo
-    containerDiv.addEventListener("click", () => {
-      toDosState.splice(i, 1);
-      renderToDos();
-      markDayWithToDo();
-      renderCalendar();
-      //ADD RENDER CALENDAR HERE
-    });
-    containerDiv.append(appointmentTitle, appointmentTime);
-    toDosContainer.append(containerDiv);
+      // remove todo
+      containerDiv.addEventListener("click", () => {
+        toDosState.splice(i, 1);
+        renderToDos();
+        markDayWithToDo();
+        renderCalendar();
+        //ADD RENDER CALENDAR HERE
+      });
+      containerDiv.append(appointmentTitle, appointmentTime);
+      toDosContainer.append(containerDiv);
 
-    // Targets days with same ID as event date
-    let dateOfToDo = toDosState[i].date;
-
-    const getDaysDiv = document.querySelectorAll(".toDoMark");
-
-    for (let index = 0; index < getDaysDiv.length; index++) {
-      if (getDaysDiv[index].id === dateOfToDo) {
-        const eventDay = document.getElementById(dateOfToDo);
-        eventDay.style.color = "red";
-
-        // creates a <p> in the calendar, TODO: make the <p> show number of events on that day
-        let eventCounter = document.createElement("p");
-        eventCounter.innerHTML = "";
-        eventDay.append(eventCounter);
-      }
     }
+    const eventDay = document.getElementById(date);
+    eventDay.style.color = "red";
+    let countShowCase = eventDay.querySelector('.counter');
+    if (countShowCase === null) {
+      countShowCase = document.createElement('p');
+      countShowCase.className = 'counter';
+      eventDay.append(countShowCase);
+    } else if (!toDosState.length) {
+      
+      //
+    }
+
+    countShowCase.innerHTML = toDosState.length;
   }
 }
 
