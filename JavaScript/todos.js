@@ -10,19 +10,6 @@ function addToDos(title, date, time) {
   }
 }
 
-/**
- * Adds to an array to keep tab on how many events there are in a specific date
- * @param {*} dateOf
- * @param {*} count
- */
-function addToDosAmount(dateOf, count) {
-  const eventsPerDay = {
-    dateOf,
-    count,
-  };
-  eventCountForDate.push(eventsPerDay);
-}
-
 //Getting the form for adding events
 const form = document.getElementById("add-event-form");
 /**
@@ -77,10 +64,10 @@ function renderToDos() {
 
   for (const [date, toDosState] of Object.entries(toDosStates)) {
     const containerDiv = document.createElement("div");
-    let appointmentTitle = document.createElement("h2");
-    appointmentTitle.className = "todo";
-
+    
     for (let i = 0; i < toDosState.length; i++) {
+      let appointmentTitle = document.createElement("h2");
+      appointmentTitle.className = "todo";
       appointmentTitle.setAttribute("id", i);
       let appointmentTime = document.createElement("span");
       appointmentTitle.innerHTML = toDosState[i].title;
@@ -105,9 +92,8 @@ function renderToDos() {
       countShowCase = document.createElement('p');
       countShowCase.className = 'counter';
       eventDay.append(countShowCase);
-    } else if (!toDosState.length) {
-      
-      //
+    } else if (!toDosState.length) { 
+      //Add code to remove from dom if there are no to dos on date
     }
 
     countShowCase.innerHTML = toDosState.length;
