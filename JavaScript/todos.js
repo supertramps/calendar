@@ -31,7 +31,6 @@ form.addEventListener("submit", (event) => {
     whatInput.value = "";
     whenInput.value = "";
     whereInput.value = "";
-    console.log(toDosState);
   }
   renderToDos();
 });
@@ -60,7 +59,8 @@ function openAddEventWindow() {
  */
 function renderToDos() {
   const toDosContainer = document.querySelector(".todo-container");
-
+  let count = 0;
+  let eventCountForDate = [];
   toDosContainer.innerHTML = "";
 
   for (let i = 0; i < toDosState.length; i++) {
@@ -86,23 +86,26 @@ function renderToDos() {
 
     // Targets days with same ID as event date
     let dateOfToDo = toDosState[i].date;
-    function markDayWithToDo() {
-      const getDaysDiv = document.querySelectorAll(".toDoMark");
-      for (let index = 0; index < getDaysDiv.length; index++) {
-        if (getDaysDiv[index].id === dateOfToDo) {
-          const eventDay = document.getElementById(dateOfToDo);
-          eventDay.style.color = "red";
 
-          // creates a <p> in the calendar, TODO: make the <p> show number of events on that day
-          let eventCounter = document.createElement("p");
-          eventCounter.innerHTML = "";
-          eventDay.append(eventCounter);
-        }
+    const getDaysDiv = document.querySelectorAll(".toDoMark");
+    
+    for (let index = 0; index < getDaysDiv.length; index++) {
+      if (getDaysDiv[index].id === dateOfToDo) {
+        count++;
+        eventCountForDate.push(count);
+        const eventDay = document.getElementById(dateOfToDo);
+        eventDay.style.color = "red";
+
+        // creates a <p> in the calendar, TODO: make the <p> show number of events on that day
+        let eventCounter = document.createElement("p");
+        eventCounter.innerHTML = count;
+        eventDay.append(eventCounter);
       }
     }
-    markDayWithToDo();
   }
+  console.log(count);
 }
+
 
 /**
  * Renders the time in the sidebar
