@@ -15,8 +15,8 @@ function addToDos(title, date, time) {
 
 /**
  * Adds to an array to keep tab on how many events there are in a specific date
- * @param {*} dateOf 
- * @param {*} count 
+ * @param {*} dateOf
+ * @param {*} count
  */
 function addToDosAmount(dateOf, count) {
   const eventsPerDay = {
@@ -26,44 +26,65 @@ function addToDosAmount(dateOf, count) {
   eventCountForDate.push(eventsPerDay);
 }
 
-
-
 //Getting the form for adding events
 const form = document.getElementById("add-event-form");
 /**
  * function for adding user input as an object (adds to the toDo object)
  */
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const whatInput = document.getElementById("what-event");
   const whenInput = document.getElementById("when-event");
-  const whereInput = document.getElementById("where-event");
+  const dateInput = document.getElementById("where-event");
 
   const what = whatInput.value;
   const when = whenInput.value;
-  const where = whereInput.value;
-  if (what !== "" && when !== "" && where !== "") {
-    addToDos(what, where, when);
+  const date = dateInput.value;
+  if (what !== "" && when !== "" && date !== "") {
+    addToDos(what, date, when);
     whatInput.value = "";
     whenInput.value = "";
-    whereInput.value = "";
+    dateInput.value = "";
 
-
-    // VI ÄR HÄR NU!!!
-    for (let i = 0; i < (eventCountForDate +1); i++) {
-
-          if (eventCountForDate[i].dateOf != where) {
-            addToDosAmount(where, +1);      
-          } else {
-            eventCountForDate[i].count++
-          }
-
+    if (eventCountForDate.length < 1) {
+      addToDosAmount(date, +1);
+      console.log("if");
+    } else if (
+      eventCountForDate.some(
+        (eventCountForDate) => eventCountForDate.dateOf === date
+      )
+    ) {
+      console.log("nånting");
+      // Här ska koden plussa på COUNT
+      [].count;
+    } else {
+      addToDosAmount(date, +1);
+      console.log("else");
     }
 
-    
-    
+    // VI ÄR HÄR NU!!!
+    // for (let i = 0; i < toDosState.length; i++) {
+    //   console.log("for");
+    //   if (toDosState.length < 1) {
+    //     addToDosAmount(date, +1);
+    //     console.log("if");
+    //     console.log(toDosState[i]);
+    //   } else if (
+    //     eventCountForDate.count !== undefined &&
+    //     eventCountForDate.count === date
+    //   ) {
+    //     console.log("else if");
+    //     eventCountForDate[i].count++;
+    //   } else {
+    //     addToDosAmount(date, +1);
+    //     console.log("else");
+    //   }
+    // }
+
     console.log(eventCountForDate);
   }
+
   renderToDos();
 });
 
@@ -91,9 +112,7 @@ function openAddEventWindow() {
  */
 function renderToDos() {
   const toDosContainer = document.querySelector(".todo-container");
-
   toDosContainer.innerHTML = "";
-
   for (let i = 0; i < toDosState.length; i++) {
     const containerDiv = document.createElement("div");
     let appointmentTitle = document.createElement("h2");
@@ -119,11 +138,9 @@ function renderToDos() {
     let dateOfToDo = toDosState[i].date;
 
     const getDaysDiv = document.querySelectorAll(".toDoMark");
-    
+
     for (let index = 0; index < getDaysDiv.length; index++) {
       if (getDaysDiv[index].id === dateOfToDo) {
-        
-        
         const eventDay = document.getElementById(dateOfToDo);
         eventDay.style.color = "red";
 
