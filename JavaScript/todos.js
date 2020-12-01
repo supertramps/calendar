@@ -64,7 +64,7 @@ function renderToDos() {
 
   for (const [date, toDosState] of Object.entries(toDosStates)) {
     const containerDiv = document.createElement("div");
-    
+
     for (let i = 0; i < toDosState.length; i++) {
       let appointmentTitle = document.createElement("h2");
       appointmentTitle.className = "todo";
@@ -82,16 +82,14 @@ function renderToDos() {
       });
       containerDiv.append(appointmentTitle, appointmentTime);
       toDosContainer.append(containerDiv);
-
     }
     const eventDay = document.getElementById(date);
-    eventDay.style.color = "red";
-    let countShowCase = eventDay.querySelector('.counter');
+    let countShowCase = eventDay.querySelector(".counter");
     if (countShowCase === null) {
-      countShowCase = document.createElement('p');
-      countShowCase.className = 'counter';
+      countShowCase = document.createElement("span");
+      countShowCase.className = "counter";
       eventDay.append(countShowCase);
-    } else if (!toDosState.length) { 
+    } else if (!toDosState.length) {
       //Add code to remove from dom if there are no to dos on date
       countShowCase.remove();
     }
