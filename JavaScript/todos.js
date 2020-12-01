@@ -77,8 +77,7 @@ function renderToDos() {
       containerDiv.addEventListener("click", () => {
         toDosState.splice(i, 1);
         renderToDos();
-        renderCalendar();
-        //ADD RENDER CALENDAR HERE
+  
       });
       containerDiv.append(appointmentTitle, appointmentTime);
       toDosContainer.append(containerDiv);
@@ -91,7 +90,7 @@ function renderToDos() {
       eventDay.append(countShowCase);
     } else if (!toDosState.length) {
       //Add code to remove from dom if there are no to dos on date
-      countShowCase.remove();
+      // countShowCase.remove();
     }
 
     countShowCase.innerHTML = toDosState.length;
