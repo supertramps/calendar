@@ -77,7 +77,6 @@ function renderToDos() {
       containerDiv.addEventListener("click", () => {
         toDosState.splice(i, 1);
         renderToDos();
-        markDayWithToDo();
         renderCalendar();
         //ADD RENDER CALENDAR HERE
       });
