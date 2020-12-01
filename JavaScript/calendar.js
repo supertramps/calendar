@@ -83,7 +83,7 @@ const renderCalendar = () => {
     ) {
       days += `<div id="${dateID}" class="today toDoMark">${i}</div>`;
     } else {
-      days += `<div id="${dateID}" class="toDoMark">${i}</div>`;
+      days += `<div id="${dateID}" class="toDoMark"><p class="date-number">${i}</p></div>`;
     }
   }
 
