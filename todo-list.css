@@ -4,7 +4,7 @@
   width: 30rem;
   margin-left: 2rem;
   background: url(./imgs/Task-bar.png),
-    linear-gradient(180deg, #3c40c6 0%, rgba(87, 95, 207, 0) 91.67%);
+  linear-gradient(180deg, #FED97C 23.96%, rgba(255, 188, 109, 0.84) 59.9%, rgba(255, 136, 109, 0.33) 100%);
   position: relative;
   bottom: 0.799rem;
   display: flex;
@@ -12,6 +12,7 @@
   overflow: hidden;
   border-radius: 1rem;
 }
+
 
 #location {
   position: absolute;
