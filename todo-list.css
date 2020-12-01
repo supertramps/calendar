@@ -3,8 +3,12 @@
   height: 65rem;
   width: 30rem;
   margin-left: 2rem;
-  background: url(./imgs/Task-bar.png),
-    linear-gradient(180deg, #3c40c6 0%, rgba(87, 95, 207, 0) 91.67%);
+  background: linear-gradient(
+    180deg,
+    #fed97c 23.96%,
+    rgba(255, 188, 109, 0.84) 59.9%,
+    rgba(255, 136, 109, 0.33) 100%
+  );
   position: relative;
   bottom: 0.799rem;
   display: flex;
@@ -61,16 +65,15 @@
   font-size: 2rem;
   font-weight: 400;
   position: relative;
-  padding-bottom: 1rem;
-  margin: 0rem 1rem 0 2rem;
+  margin: 0 0 0 2rem;
 }
 
 .todo-container span {
   margin-left: 2rem;
+  margin-bottom: 2rem;
   font-size: 1.3rem;
   font-weight: 400;
   position: relative;
-  margin: 0rem 1rem 0 3rem;
 }
 
 .task-title {
