@@ -1,4 +1,27 @@
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 770px) {
+  .container {
+    width: 100%;
+    height: 60%;
+    top: 9rem;
+    bottom: 0;
+  }
+
+  .calendar {
+    display: none;
+  }
+
+  .sidebar {
+    bottom: 0;
+    height: 30rem;
+    top: 14rem;
+  }
+
+  html {
+    font-size: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 720px) {
   .calendar {
     display: none;
   }
@@ -10,7 +33,6 @@
   .container {
     position: absolute;
     top: 0rem;
-    height: 100%;
   }
 
   .sidebar {
@@ -19,7 +41,44 @@
   }
 
   html {
-    font-size: 55% !important;
+    font-size: 70% !important;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .container {
+    width: 100%;
+    height: 60%;
+    top: 5rem;
+    bottom: 0;
+  }
+
+  .sidebar {
+    bottom: 0;
+    height: 30rem;
+    top: 9rem;
+  }
+
+  html {
+    font-size: 60% !important;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .container {
+    width: 100%;
+    height: 60%;
+    top: 5rem;
+    bottom: 0;
+  }
+
+  .sidebar {
+    bottom: 0;
+    height: 30rem;
+    top: 9rem;
+  }
+
+  html {
+    font-size: 60% !important;
   }
 }
 
@@ -34,10 +93,10 @@
   .sidebar {
     bottom: 0;
     height: 30rem;
-    top: 11rem;
+    top: 9rem;
   }
 
   html {
-    font-size: 45% !important;
+    font-size: 50% !important;
   }
 }
