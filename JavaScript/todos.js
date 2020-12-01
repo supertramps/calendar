@@ -84,16 +84,18 @@ function renderToDos() {
     }
     const eventDay = document.getElementById(date);
     let countShowCase = eventDay.querySelector(".counter");
+    
     if (countShowCase === null) {
       countShowCase = document.createElement("span");
       countShowCase.className = "counter";
       eventDay.append(countShowCase);
     } else if (!toDosState.length) {
       //Add code to remove from dom if there are no to dos on date
-      // countShowCase.remove();
+      countShowCase.remove();
     }
-
-    countShowCase.innerHTML = toDosState.length;
+    if (toDosState.length > 0) {
+      countShowCase.innerHTML = toDosState.length;
+    }
   }
 }
 
