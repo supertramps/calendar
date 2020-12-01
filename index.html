@@ -60,19 +60,19 @@
         <!-- Days inserted by JavaScript -->
       </div>
     </div>
-    <div class="sidebar">
+    <div class="sidebar" id="side" >
 
       <div id="toggleHidden" class="hidden">
         <div class="new-event-container" id="newEventContainer">
           <h4>New event</h4>
 
-          <form id="add-event-form">
+          <form id="add-event-form" autocomplete="off">
             <label for="what">What?</label></br>
             <input type="text" id="what-event" name="what"></br>
             <label for="when">When?</label></br>
             <input type="text" id="when-event" name="when"></br>
-            <label for="where">What day?</label></br>
-            <input type="date" id="where-event" name="where"></br>
+            <label for="date">What day?</label></br>
+            <input type="date" id="where-event" name="date"></br>
             <input class="submit-btn" id="btn-for-submit" type="submit" value="Add Event">
           </form>
           <div>
