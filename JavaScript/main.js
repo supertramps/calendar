@@ -7,4 +7,6 @@ function main() {
   printPhraseAndTimeToDom();
   openAddEventWindow();
   toDoListClock();
+  
+
 }

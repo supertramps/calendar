@@ -3,18 +3,24 @@
   height: 65rem;
   width: 30rem;
   margin-left: 2rem;
-  background: linear-gradient(
-    180deg,
-    #fed97c 23.96%,
-    rgba(255, 188, 109, 0.84) 59.9%,
-    rgba(255, 136, 109, 0.33) 100%
-  );
   position: relative;
   bottom: 0.799rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
   border-radius: 1rem;
+}
+.morning {
+  background: url(./imgs/Task-bar1.png),
+  linear-gradient(180deg, #FED97C 23.96%, rgba(255, 188, 109, 0.84) 59.9%, rgba(255, 136, 109, 0.33) 100%);
+}
+.day {
+  background: url(./imgs/Task-bar2.png),
+  linear-gradient(180deg, #47CFFA 23.96%, rgba(95, 248, 238, 0.84) 47.49%, rgba(225, 255, 162, 0.66) 92.01%);
+}
+.night {
+  background: url(./imgs/Task-bar3.png),
+  linear-gradient(180deg, #53A7C1 30.84%, rgba(56, 93, 149, 0.88) 61.6%, rgba(30, 72, 154, 0.88) 92.01%);
 }
 
 #location {

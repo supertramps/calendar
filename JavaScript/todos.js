@@ -91,6 +91,7 @@ function renderToDos() {
       eventDay.append(countShowCase);
     } else if (!toDosState.length) {
       //Add code to remove from dom if there are no to dos on date
+      countShowCase.remove();
     }
 
     countShowCase.innerHTML = toDosState.length;
